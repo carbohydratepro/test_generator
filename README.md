@@ -3,12 +3,21 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-1. git clone https://github.com/carbohydratepro/test_generator.git
+### 1-1. Gitリポジトリをクローン
+git clone https://github.com/carbohydratepro/test_generator.git
 
-2. cd test_generator
+cd test_generator
 
-3. docker-compose build
+### 1-2. dockerイメージをbuild
+docker-compose build
 
-4. docker-compose up -d
+### 1-3. Dockerを起動
+docker-compose up -d
 
-5. docker-compose run web rake db:create
+### 1-4. コマンドを実行
+docker-compose run web rake db:create
+
+docker-compose run web bundle install
+
+docker-compose run web bundle exec rake app:update:bin
+
